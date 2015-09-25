@@ -1,0 +1,6 @@
+#!/bin/bash
+whot=`who | grep $1 | cut -c34-38`
+whoe=`date -d $whot +%s`
+nowe=`date +%s`
+diffe=$(($nowe-$whoe))
+echo - | awk '{printf "%02d:%02d\n","'"$diffe"'"/(60*60),"'"$diffe"'"%(60*60)/60}'

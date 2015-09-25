@@ -1,0 +1,48 @@
+#!/bin/bash
+#This program runs in the background and counts the number of users logged in
+#at the end of each interval and also the number of processes run during that
+#interval. And I hated this so, so much.
+if [ $# -eq 0 ]; then
+        echo "usage: `basename $0` -t time | time" >&1; exit 2
+elif [ "$1" = "-t" ]; then
+        if [ $# -eq 2 ]; then
+                time="$2"
+        else
+                time=600
+        fi
+else
+        time="$1"
+fi
+if [ "$time" -lt 0 ]; then
+    echo "Invalid argument: $time" >&2; exit 2
+fi
+function do_ps {
+        ps -a | awk '$1 != "PID" && $1 != 1 { print $1 }' | sort -u >$1
+}
+newfile=/tmp/file1.$$
+oldfile=/tmp/file2.$$
+trap "rm -f $newfile $oldfile; exit 1" 2 3 15
+let time=$((`date +%s`+$time))
+do_ps $oldfile
+back=$!
+while [ `date +%s` -le ${time} ]; do
+        do_ps $newfile
+        #check for foreground processes
+        if [ $((tmp=`diff $newfile $oldfile | grep -c "^<"`)) -ge 1 ]; then
+                let count+=${tmp}
+                tmp=$oldfile
+                oldfile=$newfile
+                newfile=$tmp
+        fi
+        #check for background processes
+        if [ ${back} -ne $! ]; then
+                let count+=1
+                back=$!
+        fi
+        sleep 1
+done
+echo There were $count processes running
+echo There were `who | uniq | wc -l` users on the system
+rm $oldfile
+rm $newfile
+# Kill me now.

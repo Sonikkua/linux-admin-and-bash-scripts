@@ -1,0 +1,23 @@
+#!/bin/bash
+# rolo program written in function form
+
+# Function to add someone to the phonebook file
+
+add () {
+      # put commands from add program here
+}
+
+# Function to look someone up in the phone book
+
+lu () {
+      # put commands from lu program here
+}
+
+# Function to remove someone from the phone book
+
+rem () {
+      # put commands from rem program here
+}
+
+# rolo - rolodex program to look up, add, and
+#        remove people from the phone book

@@ -1,0 +1,92 @@
+root:x:0:0:root:/root:/bin/tsh
+daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+bin:x:2:2:bin:/bin:/bin/sh
+sys:x:3:3:sys:/dev:/bin/sh
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/bin/sh
+man:x:6:12:man:/var/cache/man:/bin/sh
+lp:x:7:7:lp:/var/spool/lpd:/bin/sh
+mail:x:8:8:mail:/var/mail:/bin/sh
+news:x:9:9:news:/var/spool/news:/bin/sh
+uucp:x:10:10:uucp:/var/spool/uucp:/bin/sh
+proxy:x:13:13:proxy:/bin:/bin/sh
+www-data:x:33:33:www-data:/var/www:/bin/sh
+backup:x:34:34:backup:/var/backups:/bin/sh
+list:x:38:38:Mailing List Manager:/var/list:/bin/sh
+irc:x:39:39:ircd:/var/run/ircd:/bin/sh
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh
+nobody:x:65534:65534:nobody:/nonexistent:/bin/sh
+libuuid:x:100:101::/var/lib/libuuid:/bin/sh
+syslog:x:101:103::/home/syslog:/bin/false
+messagebus:x:102:105::/var/run/dbus:/bin/false
+colord:x:103:108:colord colour management daemon,,,:/var/lib/colord:/bin/false
+lightdm:x:104:111:Light Display Manager:/var/lib/lightdm:/bin/false
+whoopsie:x:105:114::/nonexistent:/bin/false
+avahi-autoipd:x:106:117:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+avahi:x:107:118:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+usbmux:x:108:46:usbmux daemon,,,:/home/usbmux:/bin/false
+kernoops:x:109:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+pulse:x:110:119:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:111:122:RealtimeKit,,,:/proc:/bin/false
+speech-dispatcher:x:112:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/sh
+hplip:x:113:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+saned:x:114:123::/home/saned:/bin/false
+citadmin:x:1000:1000:CIT Admin,,,:/home/citadmin:/bin/tsh
+tsouza:x:1001:1001:Travis Souza,,,:/home/tsouza:/bin/tsh
+xrdp:x:115:125::/var/run/xrdp:/bin/false
+sshd:x:116:65534::/var/run/sshd:/usr/sbin/nologin
+cat:x:1002:1003:Cathy House,,,:/home/cat:/bin/tsh
+nx:x:117:1004::/var/NX/nx:/etc/NX/nxserver
+test:x:1003:1002:Cathy,,,,test user:/home/test:/bin/tsh
+samimi:x:1004:1005:Safia Amimi,CIT173 Online,,:/home/samimi:/bin/tsh
+rbauzon:x:1005:1006:Rod Bauzon,CIT173 Online,,:/home/rbauzon:/bin/tsh
+jberger:x:1006:1007:John Berger,CIT173 Online,,:/home/jberger:/bin/tsh
+abowden:x:1007:1008:Alex Bowden,CIT173 Online,,:/home/abowden:/bin/tsh
+achan-hunter:x:1008:1009:Aline Chan-Hunter,,,:/home/achan-hunter:/bin/tsh
+jchapman:x:1009:1010:Jennifer Chapman,CIT173 Online,,:/home/jchapman:/bin/tsh
+jdempse:x:1010:1011:Jonathan Dempse,CIT173 Online,,:/home/jdempse:/bin/tsh
+edickensheets:x:1011:1012:Eric Dickensheets,CIT173 Online,,:/home/edickensheets:/bin/tsh
+mdiede:x:1012:1013:Michael Diede,CIT173 Online,,:/home/mdiede:/bin/tsh
+mfoley:x:1013:1014:Michael Foley,CIT173 Online,,:/home/mfoley:/bin/tsh
+nfuller:x:1014:1015:Nathanael Fuller,CIT173 Online,,:/home/nfuller:/bin/tsh
+jgardner:x:1015:1016:Joshua Gardner,CIT173 Online,,:/home/jgardner:/bin/tsh
+shughes:x:1016:1017:Shawnee Hughes,CIT173 Online,,:/home/shughes:/bin/tsh
+cjackson:x:1017:1018:Cody Jackson,CIT173 Online,,:/home/cjackson:/bin/tsh
+jkabigting:x:1018:1019:Juliette Kabigting,CIT173 Online,,:/home/jkabigting:/bin/tsh
+dlasell:x:1019:1020:Derek Lasell,CIT173 Online,,:/home/dlasell:/bin/tsh
+tmadden:x:1020:1021:Trevor Madden,CIT173 Online,,:/home/tmadden:/bin/tsh
+cmcclure:x:1021:1022:Cruise McClure,CIT173 Online,,:/home/cmcclure:/bin/tsh
+rmiller:x:1022:1023:Robert Miller,CIT173 Online,,:/home/rmiller:/bin/tsh
+amichell:x:1023:1024:Anthony Michell,CIT173 Online,,:/home/amichell:/bin/tsh
+mmisolas:x:1024:1025:Matthew Misolas,CIT173 Online,,:/home/mmisolas:/bin/tsh
+bmurdock:x:1025:1026:Bo Murdock,CIT173 Online,,:/home/bmurdock:/bin/tsh
+ropperman:x:1026:1027:Ryan Opperman,CIT173 Online,,:/home/ropperman:/bin/tsh
+jphelps:x:1027:1028:Jacob Phelps,CIT173 Online,,:/home/jphelps:/bin/tsh
+astapleton:x:1028:1029:Amy Stapleton,CIT173 Online,,:/home/astapleton:/bin/tsh
+jthompson:x:1029:1030:Jeff Thompson,CIT173 Online,,:/home/jthompson:/bin/tsh
+atverberg:x:1030:1031:Anthony Tverberg,CIT173 Online,,:/home/atverberg:/bin/tsh
+zwall:x:1031:1032:Zachary Wall,CIT173 Online,,:/home/zwall:/bin/tsh
+kwalters:x:1032:1033:Kyle Walters,CIT173 Online,,:/home/kwalters:/bin/tsh
+aayala:x:1033:1034:Alfredo,,,:/home/aayala:/bin/tsh
+jbates:x:1034:1035:Jesse Bates,,,:/home/jbates:/bin/tsh
+jbennett:x:1035:1036:Jeremy Bennett,,,:/home/jbennett:/bin/tsh
+scannon:x:1036:1037:Selena,,,:/home/scannon:/bin/tsh
+dempey:x:1037:1038:David Empey,,,:/home/dempey:/bin/tsh
+ghall:x:1038:1039:Gregory Hall,,,:/home/ghall:/bin/tsh
+mhouk:x:1039:1040:Matthew Houk,,,:/home/mhouk:/bin/tsh
+tjenkins:x:1040:1041:Timothy Jenkins,,,:/home/tjenkins:/bin/tsh
+slangen:x:1041:1042:Steven Langen,,,:/home/slangen:/bin/tsh
+jlogan:x:1042:1043:Joshua Logan,,,:/home/jlogan:/bin/tsh
+amaresjo:x:1043:1044:Alex,,,:/home/amaresjo:/bin/tsh
+rpetersen:x:1044:1045:Robert,,,:/home/rpetersen:/bin/tsh
+rpetet:x:1045:1046:Robert Patet,,,:/home/rpetet:/bin/tsh
+srobles:x:1046:1047:Stephen,,,:/home/srobles:/bin/tsh
+osanchez:x:1047:1048:Oscar Sanchez,,,:/home/osanchez:/bin/tsh
+jschreckenghaust:x:1048:1049:John,,,:/home/jschreckenghaust:/bin/tsh
+kstillwaggon:x:1049:1050:Kevin,,,:/home/kstillwaggon:/bin/tsh
+jturley:x:1050:1051:Jacob,,,:/home/jturley:/bin/tsh
+muddin:x:1051:1052:M Hasen,,,:/home/muddin:/bin/tsh
+tdavis:x:1052:1053:Tia Davis,,,:/home/tdavis:/bin/tsh
+bettyboop:x:1053:1054:Betty,Cartoon,775-777-6666,,Betty Boop made her first appearance on August 9, 1930:/home/bettyboop:/bin/tsh
+sue:x:1054:1055:skfdj,sdfs,ssdf,:/home/sue:/bin/tsh
+bill:x:1055:1056:Bill,,,775-334-0987:/home/bill:/bin/tsh

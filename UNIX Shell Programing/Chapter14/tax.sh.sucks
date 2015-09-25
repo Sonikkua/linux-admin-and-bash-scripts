@@ -1,0 +1,91 @@
+#!/bin/bash
+# Tax Rate Calculator
+# This is the worst thing anyone has EVER written! Daikatana and Windows Me are almost better than this. 
+# So much is wrong with this.
+# I’m too tired so may as well have fun
+echo -----------------------------
+echo Welcome to the Taxinator 5000
+echo -----------------------------
+echo
+echo "Let's figure out your tax rate!"
+echo
+echo "First, are you single, or married?"
+read status
+if [[ $status == "single" || $input == "Single" ]]; #if user types “single” we go with these numbers.
+ then
+ echo "OK, what is your yearly income?"
+ read income
+ if [[ $income -lt 9076 ]];
+ then
+  echo "Given your salary and marital status your tax rate is 10%"
+  else
+  if [[ $income -gt 9075 && $income -lt 36901 ]];
+  then
+   echo "Given your salary and marital status your tax rate is 15%"
+   else
+   if [[ $income -gt 36900 && $income -lt 89351 ]];
+   then
+    echo "Given your salary and marital status your tax rate is 25%"
+    else
+    if [[ $income -gt 89350 && $income -lt 186351 ]];
+    then
+     echo "Given your salary and marital status your tax rate is 28%"
+     else
+     if [[ $income -gt 186350 && $income -lt 405101 ]];
+     then
+      echo "Given your salary and marital status your tax rate is 33%"
+      else
+      if [[ $income -gt 405100 && $income -lt 406751 ]];
+      then
+       echo "Given your salary and marital status your tax rate is 35%"
+       else
+        if [[ $income -gt 406750 ]];
+        then
+         echo "Given your salary and marital status your tax rate is 39.6%. Sucks to be you."
+       fi
+      fi 
+     fi
+    fi
+   fi
+  fi
+ fi
+ else # We don’t check what the user typed. We assume if they typed anything other than single above they typed married.
+  echo "OK, what is your yearly income?"
+  read income
+  if [[ $income -lt 18151 ]];
+  then
+   echo "Given your salary and marital status your tax rate is 10%"
+   else
+   if [[ $income -gt 18150 && $income -lt 73801 ]];
+   then
+    echo "Given your salary and marital status your tax rate is 15%"
+    else
+    if [[ $income -gt 73800 && $income -lt 148851 ]];
+    then
+     echo "Given your salary and marital status your tax rate is 25%"
+     else
+     if [[ $income -gt 148850 && $income -lt 226851 ]];
+     then
+      echo "Given your salary and marital status your tax rate is 28%"
+      else
+      if [[ $income -gt 226850 && $income -lt 405101 ]];
+      then
+       echo "Given your salary and marital status your tax rate is 33%"
+       else
+       if [[ $income -gt 405100 && $income -lt 457601 ]];
+       then
+        echo "Given your salary and marital status your tax rate is 35%"
+        else
+        if [[ $income -gt 457599 ]];
+        then
+         echo "Given your salary and marital status your tax rate is 39.6%. Time for a divorce."
+        fi
+       fi
+      fi
+     fi
+    fi
+   fi
+  fi
+ fi
+# The end of the worst script ever. Only calculates for single, or ‘married’. Thought about doing overly long if/then
+# statements for Separate and head of household but that seemed like overkill.

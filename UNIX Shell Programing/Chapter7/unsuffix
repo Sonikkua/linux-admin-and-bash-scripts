@@ -1,0 +1,6 @@
+#!/bin/bash
+# Removes character given as second argument from a filename given in the first.
+file="$1"
+suffix="$2"
+unsuffix=$( echo $file | sed s/$suffix//)
+mv $file $unsuffix

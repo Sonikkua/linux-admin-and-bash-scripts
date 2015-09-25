@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ "$#" -ne 2 ]
+then
+        echo "Incorrect number of arguments"
+        echo Supply a sed script followed by the file to be edited as a command line argument.
+else 
+sed "$1" "$2" >> /dev/null && sed "$1" "$2" > tmpfile && mv tmpfile $2
+fi

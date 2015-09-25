@@ -1,0 +1,92 @@
+zwall:x:1031:1032:Zachary Wall,CIT173 Online,,:/home/zwall:/bin/bash
+xrdp:x:115:125::/var/run/xrdp:/bin/false
+www-data:x:33:33:www-data:/var/www:/bin/sh
+whoopsie:x:105:114::/nonexistent:/bin/false
+uucp:x:10:10:uucp:/var/spool/uucp:/bin/sh
+usbmux:x:108:46:usbmux daemon,,,:/home/usbmux:/bin/false
+tsouza:x:1001:1001:Travis Souza,,,:/home/tsouza:/bin/bash
+tmadden:x:1020:1021:Trevor Madden,CIT173 Online,,:/home/tmadden:/bin/bash
+tjenkins:x:1040:1041:Timothy Jenkins,,,:/home/tjenkins:/bin/bash
+test:x:1003:1002:Cathy,,,,test user:/home/test:/bin/bash
+tdavis:x:1052:1053:Tia Davis,,,:/home/tdavis:/bin/bash
+sys:x:3:3:sys:/dev:/bin/sh
+syslog:x:101:103::/home/syslog:/bin/false
+sync:x:4:65534:sync:/bin:/bin/sync
+sue:x:1054:1055:skfdj,sdfs,ssdf,:/home/sue:/bin/bash
+sshd:x:116:65534::/var/run/sshd:/usr/sbin/nologin
+srobles:x:1046:1047:Stephen,,,:/home/srobles:/bin/bash
+speech-dispatcher:x:112:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/sh
+slangen:x:1041:1042:Steven Langen,,,:/home/slangen:/bin/bash
+shughes:x:1016:1017:Shawnee Hughes,CIT173 Online,,:/home/shughes:/bin/bash
+scannon:x:1036:1037:Selena,,,:/home/scannon:/bin/bash
+saned:x:114:123::/home/saned:/bin/false
+samimi:x:1004:1005:Safia Amimi,CIT173 Online,,:/home/samimi:/bin/bash
+rtkit:x:111:122:RealtimeKit,,,:/proc:/bin/false
+rpetet:x:1045:1046:Robert Patet,,,:/home/rpetet:/bin/bash
+rpetersen:x:1044:1045:Robert,,,:/home/rpetersen:/bin/bash
+ropperman:x:1026:1027:Ryan Opperman,CIT173 Online,,:/home/ropperman:/bin/bash
+root:x:0:0:root:/root:/bin/bash
+rmiller:x:1022:1023:Robert Miller,CIT173 Online,,:/home/rmiller:/bin/bash
+rbauzon:x:1005:1006:Rod Bauzon,CIT173 Online,,:/home/rbauzon:/bin/bash
+pulse:x:110:119:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+proxy:x:13:13:proxy:/bin:/bin/sh
+osanchez:x:1047:1048:Oscar Sanchez,,,:/home/osanchez:/bin/bash
+nx:x:117:1004::/var/NX/nx:/etc/NX/nxserver
+nobody:x:65534:65534:nobody:/nonexistent:/bin/sh
+nfuller:x:1014:1015:Nathanael Fuller,CIT173 Online,,:/home/nfuller:/bin/bash
+news:x:9:9:news:/var/spool/news:/bin/sh
+muddin:x:1051:1052:M Hasen,,,:/home/muddin:/bin/bash
+mmisolas:x:1024:1025:Matthew Misolas,CIT173 Online,,:/home/mmisolas:/bin/bash
+mhouk:x:1039:1040:Matthew Houk,,,:/home/mhouk:/bin/bash
+mfoley:x:1013:1014:Michael Foley,CIT173 Online,,:/home/mfoley:/bin/bash
+messagebus:x:102:105::/var/run/dbus:/bin/false
+mdiede:x:1012:1013:Michael Diede,CIT173 Online,,:/home/mdiede:/bin/bash
+man:x:6:12:man:/var/cache/man:/bin/sh
+mail:x:8:8:mail:/var/mail:/bin/sh
+lp:x:7:7:lp:/var/spool/lpd:/bin/sh
+list:x:38:38:Mailing List Manager:/var/list:/bin/sh
+lightdm:x:104:111:Light Display Manager:/var/lib/lightdm:/bin/false
+libuuid:x:100:101::/var/lib/libuuid:/bin/sh
+kwalters:x:1032:1033:Kyle Walters,CIT173 Online,,:/home/kwalters:/bin/bash
+kstillwaggon:x:1049:1050:Kevin,,,:/home/kstillwaggon:/bin/bash
+kernoops:x:109:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+jturley:x:1050:1051:Jacob,,,:/home/jturley:/bin/bash
+jthompson:x:1029:1030:Jeff Thompson,CIT173 Online,,:/home/jthompson:/bin/bash
+jschreckenghaust:x:1048:1049:John,,,:/home/jschreckenghaust:/bin/bash
+jphelps:x:1027:1028:Jacob Phelps,CIT173 Online,,:/home/jphelps:/bin/bash
+jlogan:x:1042:1043:Joshua Logan,,,:/home/jlogan:/bin/bash
+jkabigting:x:1018:1019:Juliette Kabigting,CIT173 Online,,:/home/jkabigting:/bin/bash
+jgardner:x:1015:1016:Joshua Gardner,CIT173 Online,,:/home/jgardner:/bin/bash
+jdempse:x:1010:1011:Jonathan Dempse,CIT173 Online,,:/home/jdempse:/bin/bash
+jchapman:x:1009:1010:Jennifer Chapman,CIT173 Online,,:/home/jchapman:/bin/bash
+jberger:x:1006:1007:John Berger,CIT173 Online,,:/home/jberger:/bin/bash
+jbennett:x:1035:1036:Jeremy Bennett,,,:/home/jbennett:/bin/bash
+jbates:x:1034:1035:Jesse Bates,,,:/home/jbates:/bin/bash
+irc:x:39:39:ircd:/var/run/ircd:/bin/sh
+hplip:x:113:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh
+ghall:x:1038:1039:Gregory Hall,,,:/home/ghall:/bin/bash
+games:x:5:60:games:/usr/games:/bin/sh
+edickensheets:x:1011:1012:Eric Dickensheets,CIT173 Online,,:/home/edickensheets:/bin/bash
+dlasell:x:1019:1020:Derek Lasell,CIT173 Online,,:/home/dlasell:/bin/bash
+dempey:x:1037:1038:David Empey,,,:/home/dempey:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+colord:x:103:108:colord colour management daemon,,,:/var/lib/colord:/bin/false
+cmcclure:x:1021:1022:Cruise McClure,CIT173 Online,,:/home/cmcclure:/bin/bash
+cjackson:x:1017:1018:Cody Jackson,CIT173 Online,,:/home/cjackson:/bin/bash
+citadmin:x:1000:1000:CIT Admin,,,:/home/citadmin:/bin/bash
+cat:x:1002:1003:Cathy House,,,:/home/cat:/bin/bash
+bmurdock:x:1025:1026:Bo Murdock,CIT173 Online,,:/home/bmurdock:/bin/bash
+bin:x:2:2:bin:/bin:/bin/sh
+bill:x:1055:1056:Bill,,,775-334-0987:/home/bill:/bin/bash
+bettyboop:x:1053:1054:Betty,Cartoon,775-777-6666,,Betty Boop made her first appearance on August 9, 1930:/home/bettyboop:/bin/bash
+backup:x:34:34:backup:/var/backups:/bin/sh
+avahi:x:107:118:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+avahi-autoipd:x:106:117:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+atverberg:x:1030:1031:Anthony Tverberg,CIT173 Online,,:/home/atverberg:/bin/bash
+astapleton:x:1028:1029:Amy Stapleton,CIT173 Online,,:/home/astapleton:/bin/bash
+amichell:x:1023:1024:Anthony Michell,CIT173 Online,,:/home/amichell:/bin/bash
+amaresjo:x:1043:1044:Alex,,,:/home/amaresjo:/bin/bash
+achan-hunter:x:1008:1009:Aline Chan-Hunter,,,:/home/achan-hunter:/bin/bash
+abowden:x:1007:1008:Alex Bowden,CIT173 Online,,:/home/abowden:/bin/bash
+aayala:x:1033:1034:Alfredo,,,:/home/aayala:/bin/bash

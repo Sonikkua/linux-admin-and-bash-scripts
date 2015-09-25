@@ -1,0 +1,2 @@
+#!/bin/bash
+tbl $1 | nroff -mm Tlp | lp

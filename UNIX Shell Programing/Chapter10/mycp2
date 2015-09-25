@@ -1,0 +1,33 @@
+#!/bin/bash
+#Filename: mycp  
+if [ "$#" -ne 3 ] 
+then 
+echo "usage: mycp from to" 
+exit 1 
+fi 
+from="$1" 
+to="$2" 
+while getopts n: option 
+do 
+     case $option 
+     in 
+         n) cp $from $to;; 
+        /?) echo "Invalide option -$option" 
+            exit 2;; 
+done
+shift $((OPTIND-1)) 
+if ["$OPTIND" -gt "$#" ] 
+then 
+echo "Usage: mycp from to" 
+exit 3 
+fi 
+if [ -f "$to" ] 
+then 
+echo "$to already exists; overwrite (y/n)?" 
+read answer 
+     if [ "$answer” != "yes” ] 
+     then 
+          echo "Copy not performed" 
+          exit 0 
+     fi 
+fi

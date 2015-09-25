@@ -1,0 +1,5 @@
+#!/bin/bash
+# look up someone in the phonebook file and format output using printf. It works :-P
+name=`grep -i "$1" phonebook | cut -f1`
+number=`grep -i "$1" phonebook | cut -f2`
+printf "%-40s%-15s\n" "$name" "$number"

@@ -1,0 +1,32 @@
+#!/bin/bash
+# Removes files depending on arguments or variable set when run.
+# Checks for correct number of arguments.
+if [ "$#" -le 0 ]
+then
+        echo "Incorrect number of arguments"
+        echo "Usage: myrm [argument 1] [argument 2]"
+fi
+# Checks to see if MAXFILES variable is set. If it is, removes the specified number of files and no more.
+if [ -z "$MAXFILES" ]
+then
+        for i in $1 $2 $3 $4 $5 $6 $7 $8 $9 ${10}
+        do
+                rm -rf $i
+                shift
+        done
+        exit 1
+fi
+if [ -n "$MAXFILES" -a "$#" -lt "$MAXFILES" ]
+then
+        rm -rf $*
+else
+        echo "Remove $# files? (y/n)"
+        read answer
+        case "$answer"
+        in
+                y)      rm -rf $*;;
+                n)      echo "exiting without removing files";;
+                *)      echo "Incorrect option"
+                        exit;;
+        esac
+fi

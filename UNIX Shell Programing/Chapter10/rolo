@@ -1,0 +1,28 @@
+#!/bin/bash
+# rolo - rolodex program to look up, add, and
+# remove people from the phone book
+# Display menu
+echo '
+    Would you like to:
+          1. Look someone up
+          2. Add someone to the phone book
+          3. Remove someone from the phone book
+    Please select one of the above (1-3):'
+# Read and process selection
+read choice
+echo
+case "$choice"
+in
+     1) echo "Enter name to look up:"
+        read name
+        lu "$name";;
+     2) echo "Enter name to be added:"
+        read name
+        echo "Enter number:"
+        read number
+        add "$name" "$number";;
+     3) echo "Enter name to be removed:"
+        read name
+        rem "$name";;
+     *) echo "Bad choice";;
+esac

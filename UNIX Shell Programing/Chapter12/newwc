@@ -1,0 +1,72 @@
+#!/bin/bash
+# Recreating wc in bash using IFS
+# By Robert (@Sonikku_a) with help from @z3fr4m on Twitter!
+
+lines=0
+words=0
+chars=0
+
+function for_great_justice_count_every_zig () # wc function
+{
+  IFS_BAK=$IFS
+  file_name="$1"
+  l=0
+  w=0
+  c=0
+  word=("")
+
+  IFS=$'\n'
+  while read -r line
+    do
+      l=$((l+1))
+      curr_line_char=${#line}
+      c=$((c+curr_line_char))
+      # set IFS to standard field terminating chars
+      IFS=$IFS_BAK
+      read -a word <<< "$line"
+      w=$((w+${#word[*]}))
+      # set IFS to \n
+      IFS=$'\n'
+  done < "$file_name"
+  
+  IFS=$IFS_BAK
+  # If last line is not \n term'd then last read will fail
+  # We calculate the last line separately
+  # if not null
+  if [ -n "$line" ]
+    then
+      # We should not count this line, because it 
+      # is not term'd by newline character
+      curr_line_char="${#line}"
+      c=$((c+curr_line_char))
+      read -a word <<< "$line"
+      w=$((w+${#word[*]}))
+  fi
+  # The newline characters are also characters, so count them
+  c=$((c+l))
+  #   echo -e "\nFile name: $file_name \nLines : $l\tWords: $w\tCharacters: $c"
+  echo "	How are you Gentlemen?" # Some humor
+  echo "	All your wc are belong to us." # See https://www.youtube.com/watch?v=8fvTxv46ano
+  echo "  $l lines, $w words, $c chars in $file_name"
+  chars=$((total_c+c))
+  lines=$((total_l+l))
+  words=$((total_w+w))
+}
+
+# Main Sequence Turn On
+file_count=$#
+while [ -n "$1" ]
+do
+  file_name="$1"
+  if [ ! -f "$file_name" ]
+   then
+     echo "File \"$file_name\" does not exist, someone set you up the bomb?"
+     shift 1
+     continue
+  fi
+  # Calls wc function from earlier
+  for_great_justice_count_every_zig "$1"
+
+  shift 1
+done
+# Apologies for 10 year old internet memes used

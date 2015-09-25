@@ -1,0 +1,24 @@
+time="$1"
+do_ps() { 
+    ps -af | awk '$3 != "PPID" && $3 != 1 { print $3 }' | sort -u >$1 
+    #ps -auc | awk '$2 != "PPID" && $2 !=1 { print $2 }' | sort -u >$1 
+pid=$$ 
+psfile1=~/Chapter9/psfile1${pid}.tmp 
+psfile2=~/Chapter9/psfile2${pid}.tmp 
+newfile=$psfile1 
+oldfile=$psfile2 
+trap "rm -f $psfile1 $psfile2; exit 1" 2 3 15 
+let time=`date +%s`+"$time" 
+do_ps $oldfile 
+users=`wc -l < $oldfile | sed 's/ //g'` 
+new_count=0 
+while [ `date +%s` -le "$time" ]; do 
+    do_ps $newfile 
+    #cat $newfile 
+    diff_count=`diff $newfile $oldfile | grep -c "^<"` 
+    new_count=$((new_count + $diff_count)) 
+    #echo "new_count = $new_count" 
+done 
+echo "Start user count: $users" 
+echo "New user count:   $new_count" 
+rm -f $psfile1 $psfile2

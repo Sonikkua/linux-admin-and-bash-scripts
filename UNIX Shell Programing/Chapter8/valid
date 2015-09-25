@@ -1,0 +1,5 @@
+#!/bin/bash
+if grep '[a-zA-Z0-9_]$' <<<$1 ;
+  then echo YES $1 is a valid variable
+  else echo NO that is not a valid variable;
+fi

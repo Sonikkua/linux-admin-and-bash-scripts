@@ -1,0 +1,12 @@
+#!/bin/bash
+# Testing out the break command
+while true
+do
+      cmd=$(getcmd)
+      if [ "$cmd" = quit ]
+      then
+              break
+      else
+              processcmd "$cmd"
+      fi
+done

@@ -1,0 +1,76 @@
+#!/bin/bash
+# Archived programs used by rolo.
+
+echo Extracting lu
+
+cat >lu <<\THE-END-OF-DATA
+
+# Look someone up in the phone book
+
+if [ "$#" -ne 1 ]
+then
+        echo "Incorrect number of arguments"
+        echo "Usage: lu name"
+        exit 1
+fi
+
+name=$1
+grep "$name" $PHONEBOOK
+
+if [ $? -ne 0 ]
+then
+        echo "I couldn't find $name in the phone book"
+fi
+
+THE-END-OF-DATA
+
+echo Extracting add
+cat >add <<\THE-END-OF-DATA
+
+# Program to add someone to the phonebook file
+
+if [ "$#" -ne 2 ]
+then
+      echo "Incorrect number of arguments"
+      echo "Usage: add name number"
+      exit 1
+fi
+
+echo "$1    $2" >> $PHONEBOOK
+sort -o $PHONEBOOK $PHONEBOOK
+
+THE-END-OF-DATA
+
+echo Extracting rem
+cat >rem <<\THE-END-OF-DATA
+
+# Remove someone from the phone book
+
+if [ "$#" -ne 1 ]
+then
+      echo "Incorrect number of arguments"
+      echo "Usage: rem name"
+      exit 1
+fi
+
+name=$1
+
+# Find number of matching entries
+
+matches=$(grep "$name" $PHONEBOOK | wc l)
+
+# If more than one match, issue message, else remove it
+if [ "$matches" -gt 1 ]
+
+then
+        echo "More than one match; please qualify further"
+elif [ "$matches" -eq 1 ]
+
+then
+        grep -v "$name" $PHONEBOOK > /tmp/phonebook
+        mv /tmp/phonebook $PHONEBOOK
+else
+        echo "I couldn't find $name in the phone book"
+fi
+
+THE-END-OF-DATA

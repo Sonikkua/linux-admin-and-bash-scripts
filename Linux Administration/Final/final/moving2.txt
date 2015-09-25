@@ -1,0 +1,18 @@
+total 72
+drwxrwx---  9 rpetersen rpetersen 4096 Dec  9 13:58 .
+drwxr-xr-x 58 root      root      4096 Dec  4 16:32 ..
+-rw-------  1 rpetersen rpetersen   88 Dec  8 11:14 .bash_history
+-rw-r--r--  1 rpetersen rpetersen  220 Sep 17 13:32 .bash_logout
+-rw-r--r--  1 rpetersen rpetersen 3680 Oct 30 17:03 .bashrc
+drwx------  4 rpetersen rpetersen 4096 Dec  4 04:10 .cache
+drwx------  3 rpetersen rpetersen 4096 Dec  4 04:10 .config
+drwx------  3 rpetersen rpetersen 4096 Dec  4 04:10 .dbus
+drwxrwx---  2 rpetersen rpetersen 4096 Dec  9 14:00 final
+drwxr-xr-x  2 rpetersen rpetersen 4096 Dec  4 04:21 .fontconfig
+drwx------  2 rpetersen rpetersen 4096 Dec  4 04:14 .gconf
+drwx------  4 rpetersen rpetersen 4096 Dec  4 04:21 .gegl-0.0
+-rw-rw-r--  1 rpetersen rpetersen    0 Dec  9 14:00 moving.txt
+-rw-r--r--  1 rpetersen rpetersen  825 Oct 18 19:34 .profile
+-rw-------  1 rpetersen rpetersen 8446 Dec  9 13:49 .viminfo
+-rw-------  1 rpetersen rpetersen  104 Dec  9 12:59 .Xauthority
+-rw-rw-r--  1 rpetersen rpetersen   17 Dec  9 13:25 xmas.txt

@@ -1,0 +1,40 @@
+#!/bin/bash
+# Wait until a specified directory exists
+# Set up default values
+mailopt=FALSE
+interval=60
+# process command options
+while getopts mt: option
+do
+     case "$option"
+     in
+            m) mailopt=TRUE;;
+            t) interval=$OPTARG;;
+           \?) echo "Usage: mon [-m] [-t n] user"
+               echo "   -m means to be informed by mail"
+               echo "   -t means check every n secs."
+               exit 1;;
+     esac
+done
+# Make sure a directory name was specified
+if [ "$OPTIND" -gt "$#" ]
+then
+     echo "Missing directory name!"
+     exit 2
+fi
+shiftcount=$((OPTIND -1))
+shift $shiftcount
+directory=$1
+# Check for directory
+until test -f $directory
+do
+     sleep $interval
+done
+# When we reach this point, the user has logged on
+if [ "$mailopt" = FALSE ]
+then
+     echo "$directory exists”
+else
+     runner=$(who am i | cut -c1-8)
+echo "$directory exists” | mail $runner
+fi

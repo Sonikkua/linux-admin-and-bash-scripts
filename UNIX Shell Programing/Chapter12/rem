@@ -1,0 +1,4 @@
+#!/bin/bash
+# Remove someone from the phone book
+grep -v "$1" phonebook > ~/tempfiles/phonebook
+mv ~/tempfiles/phonebook phonebook

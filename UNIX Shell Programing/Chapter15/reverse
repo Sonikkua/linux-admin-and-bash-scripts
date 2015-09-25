@@ -1,0 +1,17 @@
+#!/bin/bash
+# read lines to array buf
+
+typeset -i line=0
+
+while (( line < 4096 )) && read buf[line]
+do
+ (( line = line + 1 ))
+done
+
+# now print the lines in reverse order
+
+while (( line > 0 )) 
+do
+ (( line = line - 1 ))
+ echo "${buf[line]}"
+done
